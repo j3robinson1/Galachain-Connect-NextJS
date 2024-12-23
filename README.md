@@ -1,4 +1,4 @@
-# Wall of Fame - Next.js Edition
+# Galachain Connect NextJS
 
 A Next.js-based web application designed to showcase achievements and connect users' wallets for interactions within the GalaChain ecosystem.
 
@@ -15,6 +15,7 @@ A Next.js-based web application designed to showcase achievements and connect us
 ```bash
 git clone https://github.com/j3robinson1/Galachain-Connect-NextJS.git
 cd Galachain-Connect-NextJS
+```
 
 ## Setup and Installation
 
@@ -26,6 +27,7 @@ npm install
 yarn install
 # or
 pnpm install
+```
 
 ## Configure the Environment
 Create a `.env.local` file in the root directory and add the following:
@@ -36,7 +38,7 @@ NEXT_PUBLIC_BURN_GATEWAY_PUBLIC_KEY_API=https://gateway-mainnet.galachain.com/ap
 NEXT_PUBLIC_GALASWAP_API=https://api-galaswap.gala.com/v1
 NEXT_PUBLIC_PROJECT_ID=<your project id>
 NEXT_PUBLIC_GATEWAY_API=https://api-galaswap.gala.com/galachain/api/asset/public-key-contract
-
+```
 Replace <your project id> with your actual project ID.
 
 ## Start the Development Server
@@ -47,6 +49,7 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+```
 
 ## Features
 
