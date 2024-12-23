@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wall of Fame - Next.js Edition
 
-## Getting Started
+A Next.js-based web application designed to showcase achievements and connect users' wallets for interactions within the GalaChain ecosystem.
 
-First, run the development server:
+## Prerequisites
+
+- Node.js (v14 or later)
+- npm, yarn, or pnpm
+- MetaMask or compatible Web3 wallet
+
+## Setup and Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/j3robinson1/Galachain-Connect-NextJS.git
+cd Galachain-Connect-NextJS
+
+## Setup and Installation
+
+### Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+## Configure the Environment
+Create a `.env.local` file in the root directory and add the following:
+
+```plaintext
+NEXT_PUBLIC_BURN_GATEWAY_API=https://gateway-mainnet.galachain.com/api/asset/token-contract
+NEXT_PUBLIC_BURN_GATEWAY_PUBLIC_KEY_API=https://gateway-mainnet.galachain.com/api/asset/public-key-contract
+NEXT_PUBLIC_GALASWAP_API=https://api-galaswap.gala.com/v1
+NEXT_PUBLIC_PROJECT_ID=<your project id>
+NEXT_PUBLIC_GATEWAY_API=https://api-galaswap.gala.com/galachain/api/asset/public-key-contract
+
+Replace <your project id> with your actual project ID.
+
+## Start the Development Server
 
 ```bash
 npm run dev
@@ -10,25 +47,40 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **MetaMask Wallet Connection:** Seamlessly connect your MetaMask wallet.
+- **Automatic User Registration:** Register users automatically with GalaChain if needed.
+- **GALA Token Balance Display:** Check your GALA token balance, including locked amounts.
+- **Token Burning Functionality:** Allows users to burn GALA tokens directly from the interface.
+- **Token Transfer Functionality:** Allows users to transfer GALA tokens directly from the interface.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+- `pages/index.js` - The main entry point for the application.
+- `components/`
+  - `Balance.js` - Displays the GALA balance.
+  - `BurnGala.js` - Handles the burning of GALA tokens.
+  - `TransferGala.js` - Handles the transfer of GALA tokens.
+  - `WalletConnect.js` - Manages wallet connections and interactions.
 
-To learn more about Next.js, take a look at the following resources:
+Environment variables are defined in `.env.local`. Next.js configuration is managed through `next.config.js`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+2. Click "Connect Wallet" to connect your MetaMask wallet.
+3. Once connected, you'll see your GALA balance.
+4. Enter the amount of GALA you want to burn.
+5. Click "Burn Tokens" to initiate the transaction.
+6. Confirm the transaction in your MetaMask popup.
 
-## Deploy on Vercel
+## Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application is built using:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js** for server-side rendering and static generation.
+- **React** for building user interfaces.
+- **TailwindCSS** for styling.
+- **GalaChain Connect library** for blockchain interactions.
