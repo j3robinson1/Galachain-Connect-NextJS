@@ -30,7 +30,7 @@ pnpm install
 ```
 
 ## Configure the Environment
-Create a `.env.local` file in the root directory and add the following:
+Create a `.env` file in the root directory and add the following:
 
 ```plaintext
 NEXT_PUBLIC_BURN_GATEWAY_API=https://gateway-mainnet.galachain.com/api/asset/token-contract
@@ -68,16 +68,7 @@ pnpm dev
   - `TransferGala.js` - Handles the transfer of GALA tokens.
   - `WalletConnect.js` - Manages wallet connections and interactions.
 
-Environment variables are defined in `.env.local`. Next.js configuration is managed through `next.config.js`.
-
-## Usage
-
-1. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
-2. Click "Connect Wallet" to connect your MetaMask wallet.
-3. Once connected, you'll see your GALA balance.
-4. Enter the amount of GALA you want to burn.
-5. Click "Burn Tokens" to initiate the transaction.
-6. Confirm the transaction in your MetaMask popup.
+Environment variables are defined in `.env`. Next.js configuration is managed through `next.config.js`.
 
 ## Development
 
