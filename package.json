@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@gala-chain/connect": "^1.4.2",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^14.0.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
